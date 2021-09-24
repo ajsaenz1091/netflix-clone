@@ -14,6 +14,8 @@ function Row({title, url}) {
         return movies.map(movie => <MoviePoster key={movie.id} {...movie}/>)
     }
 
+    console.table(movies) // This logs a Table instead of an Object COOOOL
+
     return (
         <div className="row">
             <h2>{title}</h2>
