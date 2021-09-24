@@ -4,12 +4,15 @@ import axios from './axios'
 function Row({title, url}) {
     const [movies, setMovies] = useState([])
 
-    const fetchMovies = async () => {
-        const request = await axios.get(url)
-        console.log(request)
-    }
+    // const fetchMovies = async () => {
+    //     const request = await axios.get(url)
+    //     setMovies(request.data.results)
+    // }
 
-    useEffect(fetchMovies(),[])
+    useEffect(async () => {
+        const request = await axios.get(url)
+        setMovies(request.data.results)
+    },[url])
 
     return (
         <div>
