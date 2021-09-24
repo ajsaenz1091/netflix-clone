@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import axios from './axios'
-import MoviePoster from './MoviePoster'
+import axios from '../../axios'
+import MoviePoster from '../movie-poster/MoviePoster'
+import "./Row.css"
 
 function Row({title, url}) {
     const [movies, setMovies] = useState([])

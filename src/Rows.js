@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { MovieContext } from './contexts/MovieContext'
-import Row from './Row'
+import Row from './components/row/Row'
 
 function Rows() {
     const { requests } = useContext(MovieContext)
