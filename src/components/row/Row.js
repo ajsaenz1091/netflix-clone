@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from '../../axios'
+import requests from '../../Requests'
 import MoviePoster from '../movie-poster/MoviePoster'
 import "./Row.css"
 
@@ -8,6 +9,7 @@ function Row({title, url}) {
 
     useEffect(async () => {
         const request = await axios.get(url)
+        console.log(request.data.results)
         setMovies(request.data.results)
     },[url])
 
